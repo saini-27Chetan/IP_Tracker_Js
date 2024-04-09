@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IP Tracker</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Leafletjs Map -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- API/Third Party Website USED -->
+    <!-- 1. https://geo.ipify.org/ -->
+    <!-- 2. https://leafletjs.com/ -->
+  </head>
+  <body>
+    <main>
+      <header id="header">
+        <div id="heading">IP Address Tracker</div>
+        <div id="input-area">
+          <input
+            type="text"
+            placeholder="Search for any IP address"
+            id="input"
+          />
+          <button id="btn"><img src="./images/icon-arrow.svg" alt="" /></button>
+        </div>
+        <section id="info-board">
+          <div class="info">
+            <div class="info-head">IP ADDRESS</div>
+            <div class="info-detail" id="ip-address">-</div>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="info">
+            <div class="info-head">LOCATION</div>
+            <div class="info-detail"><span id="city">-</span>, <span id="country">-</span> <span id="postalcode">-</span></div>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="info">
+            <div class="info-head">TIMEZONE</div>
+            <div class="info-detail">UTC <span id="timezone">-</span></div>
+          </div>
+          <div class="vertical-line"></div>
+          <div class="info">
+            <div class="info-head">ISP</div>
+            <div class="info-detail" id="isp">-</div>
+          </div>
+        </section>
+      </header>
+
+      <div id="map"></div>
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="./Scripts/bgImgScript.js"></script>
+    <script src="./Scripts/mainScript.js"></script>
+    <script src="./Scripts/mapScript.js"></script>
+  </body>
+</html>
