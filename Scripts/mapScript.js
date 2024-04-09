@@ -15,10 +15,10 @@ const updateMap = (latitude, longitude) => {
     }).addTo(map);
     
     // To edit the marker's logo 
-    var myIcon = L.icon({
-        iconUrl: '../images/marker-logo.png',
+    let myIcon = L.icon({
+        iconUrl: '../images/icon-location.svg',
         // iconSize: [width, height]
-        iconSize: [38, 40]
+        iconSize: [30, 40]
     });
     
     // If we will remove this if condition we will get to see more than one marker for the same pair of latitude and longtitude, don't know why it happens
